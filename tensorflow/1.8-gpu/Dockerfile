@@ -2,7 +2,15 @@ FROM nvidia/cuda:9.0-cudnn7-devel
 LABEL maintainer "Abhishek Maharjan <rpidanny.abhishek@gmail.com>"
 
 RUN apt-get update && apt-get upgrade -y
-RUN apt-get install -y python3-pip tmux zsh curl git wget nano locales
+RUN apt-get install -y python3-pip \
+  tmux \
+  zsh \
+  curl \
+  git \
+  wget \
+  nano \
+  locales \
+  libgtk2.0-dev
 
 RUN locale-gen en_US.UTF-8 && update-locale LANG=en_US.UTF-8
 
