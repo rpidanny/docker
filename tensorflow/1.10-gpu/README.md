@@ -1,4 +1,4 @@
-# Tensorflow 1.8 GPU
+# Tensorflow 1.10 GPU
 
 ## Build image
 
