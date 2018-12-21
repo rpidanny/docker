@@ -1,8 +1,7 @@
 FROM ubuntu:18.04
 LABEL maintainer "Abhishek Maharjan <rpidanny.abhishek@gmail.com>"
 
-RUN apt-get update && apt-get upgrade -y
-RUN apt-get install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     tmux \
     zsh \
     curl \
@@ -21,10 +20,8 @@ RUN curl -O https://bootstrap.pypa.io/get-pip.py && \
     python get-pip.py && \
     rm get-pip.py
 
-RUN pip install tensorflow-gpu===1.10.0 opencv-python==3.4.2.17 pillow h5py scipy colorama
-
 RUN pip --no-cache-dir install \
-    tensorflow===1.0.0 \
+    tensorflow===1.4.0 \
     opencv-python \
     Pillow \
     h5py \
@@ -35,8 +32,7 @@ RUN pip --no-cache-dir install \
     pandas \
     scipy \
     sklearn \
-    colorama \
-    &&
+    colorama
 
 # RUN ln -s -f /usr/bin/python3 /usr/bin/python
 
