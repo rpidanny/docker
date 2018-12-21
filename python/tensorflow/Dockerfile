@@ -38,7 +38,7 @@ RUN pip --no-cache-dir install \
     colorama \
     &&
 
-RUN ln -s -f /usr/bin/python3 /usr/bin/python
+# RUN ln -s -f /usr/bin/python3 /usr/bin/python
 
 # Tensorboard
 EXPOSE 6006
